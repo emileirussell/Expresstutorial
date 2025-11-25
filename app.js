@@ -5,6 +5,8 @@ const app = express();
 app.use(cors());
 const router = express.Router();
 
+app.use(express.static(__dirname + '/FrontendFiles'));
+
 app.get("/hello", function(req, res) {
     res.send("<h1>Hello Express</h1>");
 });
